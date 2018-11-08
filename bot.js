@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const bot1 = new Discord.Client();
-
+var prefix = "?";
+const ID = '474573718967025665';
 
 bot1.on('ready', () => {
   console.log('')
@@ -11,12 +12,20 @@ bot1.on('ready', () => {
   console.log('')
   console.log('╔[════════════════════════════════════]╗');
   console.log(`Logged in as * [ " ${bot1.user.username} " ]`);
+  console.log(`Logged in as * [ " ${bot2.user.username} " ]`);
+  console.log(`Logged in as * [ " ${bot3.user.username} " ]`);
   console.log('')
   console.log('Informations :')
   console.log('')
   console.log(`servers! [ " ${bot1.guilds.size} " ]`);
-  console.log(`Users! [ " ${bot1.users.size} " ]`);
+  console.log(`Users! [ " ${bot1.users.size} " ]`);a
   console.log(`channels! [ " ${bot1.channels.size} " ]`);
+  console.log(`servers! [ " ${bot2.guilds.size} " ]`);
+  console.log(`Users! [ " ${bot2.users.size} " ]`);
+  console.log(`channels! [ " ${bot2.channels.size} " ]`);
+  console.log(`servers! [ " ${bot3.guilds.size} " ]`);
+  console.log(`Users! [ " ${bot3.users.size} " ]`);
+  console.log(`channels! [ " ${bot3.channels.size} " ]`);
   console.log('╚[════════════════════════════════════]╝')
   console.log('')
   console.log('╔[════════════]╗')
@@ -29,7 +38,7 @@ bot1.on('ready', () => {
 
  bot1.on('message', message => {
   
-  if (message.content === 'Do your Daily') {
+  if (message.content === 'daily') {
 
 message.channel.send('#daily')
 }
@@ -38,7 +47,8 @@ message.channel.send('#daily')
 
  bot1.on('message', message => {
   
-  if (message.content === 'do rep') {
+if (!ID.includes(message.author.id)) return;
+  if (message.content === 'rep') {
 
 message.channel.send('#rep <@474573718967025665>')
 }
@@ -50,7 +60,7 @@ if (message.content === '!spam') {
       let count = 0;
       let ecount = 0;
       for(let x = 0; x < 90000; x++) {
-        message.channel.send('kareem is my dad')
+        message.channel.send('i love F4res..!!!')
           .then(m => {
             count++;
           })
@@ -66,15 +76,35 @@ bot1.on('message', message => {
   let command = message.content.split(" ")[0];
   let args = message.content.split(" ").slice(1);
   if(!args) return message.channel.send(`say1 <words>`);
-if (command == "say1") {
+if (command == "say16") {
 message.channel.send(args.join("  "))
     message.delete();
   }
 });
 
 
+bot1.on('message', message => {
+  if (message.author.bot) return;
+  if (!message.content.startsWith(prefix)) return;
+
+  let command = message.content.split(" ")[0];
+  command = command.slice(prefix.length);
+
+  let args = message.content.split(" ").slice(1);
+  if(!args) return message.channel.send(`${prefix}say <words>`);
+
+if (command == "say") {
+
+message.channel.send(args.join("  "))
+    message.delete();
+  }
+
+
+
 
 bot1.login(process.env.FB1);
+
+
 
 
 
@@ -87,15 +117,16 @@ bot1.login(process.env.FB1);
 const bot2 = new Discord.Client();
  bot2.on('message', message => {
   
-  if (message.content === 'Do your Daily') {
+  if (message.content === 'daily') {
 
 message.channel.send('#daily')
 }
 });
 
  bot2.on('message', message => {
-  
-  if (message.content === 'do rep') {
+    if (!ID.includes(message.author.id)) return;
+
+  if (message.content === 'rep') {
 
 message.channel.send('#rep <@474573718967025665>')
 }
@@ -106,7 +137,7 @@ if (message.content === '!spam') {
       let count = 0;
       let ecount = 0;
       for(let x = 0; x < 90000; x++) {
-        message.channel.send('kef 7alk ya spam??')
+        message.channel.send('i love Palestain')
           .then(m => {
             count++;
           })
@@ -122,11 +153,28 @@ bot2.on('message', message => {
   let command = message.content.split(" ")[0];
   let args = message.content.split(" ").slice(1);
   if(!args) return message.channel.send(`say1 <words>`);
-if (command == "say2") {
+if (command == "say17") {
 message.channel.send(args.join("  "))
     message.delete();
   }
 });
+
+bot2.on('message', message => {
+  if (message.author.bot) return;
+  if (!message.content.startsWith(prefix)) return;
+
+  let command = message.content.split(" ")[0];
+  command = command.slice(prefix.length);
+
+  let args = message.content.split(" ").slice(1);
+  if(!args) return message.channel.send(`${prefix}say <words>`);
+
+if (command == "say") {
+
+message.channel.send(args.join("  "))
+    message.delete();
+  }
+
 
 
 
@@ -139,7 +187,7 @@ bot2.login(process.env.FB2);
 const bot3 = new Discord.Client();
  bot3.on('message', message => {
   
-  if (message.content === 'Do your Daily') {
+  if (message.content === 'daily') {
 
 message.channel.send('#daily')
 }
@@ -147,7 +195,9 @@ message.channel.send('#daily')
 
  bot3.on('message', message => {
   
-  if (message.content === 'do rep') {
+  if (message.content === 'rep') {
+
+    if (!ID.includes(message.author.id)) return;
 
 message.channel.send('#rep <@474573718967025665>')
 }
@@ -158,7 +208,7 @@ if (message.content === '!spam') {
       let count = 0;
       let ecount = 0;
       for(let x = 0; x < 90000; x++) {
-        message.channel.send('i love credits')
+        message.channel.send('Discord is bad!')
           .then(m => {
             count++;
           })
@@ -175,11 +225,29 @@ bot3.on('message', message => {
   let command = message.content.split(" ")[0];
   let args = message.content.split(" ").slice(1);
   if(!args) return message.channel.send(`say1 <words>`);
-if (command == "say3") {
+if (command == "say18") {
 message.channel.send(args.join("  "))
     message.delete();
   }
 });
+
+
+bot3.on('message', message => {
+  if (message.author.bot) return;
+  if (!message.content.startsWith(prefix)) return;
+
+  let command = message.content.split(" ")[0];
+  command = command.slice(prefix.length);
+
+  let args = message.content.split(" ").slice(1);
+  if(!args) return message.channel.send(`${prefix}say <words>`);
+
+if (command == "say") {
+
+message.channel.send(args.join("  "))
+    message.delete();
+  }
+
 
 
 bot3.login(process.env.FB3);

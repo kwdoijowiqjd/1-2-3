@@ -1,6 +1,8 @@
 const Discord = require('discord.js');
 const bot1 = new Discord.Client();
 
+const ID = '474573718967025665';
+
 
 bot1.on('ready', () => {
   console.log('')
@@ -28,6 +30,8 @@ bot1.on('ready', () => {
  
 
  bot1.on('message', message => {
+
+    if (!ID.includes(message.author.id)) return;
   
   if (message.content === 'Do your Daily') {
 
@@ -37,6 +41,8 @@ message.channel.send('#daily')
 
 
  bot1.on('message', message => {
+
+    if (!ID.includes(message.author.id)) return;
   
   if (message.content === 'do rep') {
 

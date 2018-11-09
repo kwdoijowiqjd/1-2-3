@@ -144,8 +144,8 @@ message.channel.send(args.join("  "))
 /////////////////////////////////////////
 bot2.on('message', message => {
   if(message.content.startsWith(`Join`)){
-      const channel = message.guild.channels.find('name', "spam");
-      channel.join();
+      const channel1 = message.guild.channels.find('name', "spam");
+      channel1.join();
       message.channel.send(`DONE!`)
   }
 });
@@ -211,8 +211,8 @@ message.channel.send(args.join("  "))
 
 bot3.on('message', message => {
   if(message.content.startsWith(`Join`)){
-      const channel = message.guild.channels.find('name', "spam");
-      channel.join();
+      const channel2 = message.guild.channels.find('name', "spam");
+      channel2.join();
       message.channel.send(`DONE!`)
   }
 });

@@ -25,7 +25,7 @@ bot1.on('ready', () => {
   console.log('')
   console.log('')
 });
- 
+  
 ////////////////////////////////////
  bot1.on('message', message => {
   

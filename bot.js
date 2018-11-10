@@ -75,13 +75,7 @@ message.channel.send(args.join("  "))
 
 /////////////////////////////
 
-bot1.on('message', message => {
-  if(message.content.startsWith(`Join`)){
-      const channel = message.guild.channels.find('name', "spam");
-      channel.join();
-      message.channel.send(`DONE!`)
-  }
-});
+
 
 bot1.login(process.env.FB1);
 
@@ -142,12 +136,7 @@ message.channel.send(args.join("  "))
 });
 
 /////////////////////////////////////////
-bot2.on('message', message => {
-  if(message.content.startsWith(`Join`)){
-      channel.join();
-      message.channel.send(`DONE!`)
-  }
-});
+
 
 bot2.login(process.env.FB2);
 
@@ -208,12 +197,7 @@ message.channel.send(args.join("  "))
 
 ////////////////////////////////////
 
-bot3.on('message', message => {
-  if(message.content.startsWith(`Join`)){
-      channel.join();
-      message.channel.send(`DONE!`)
-  }
-});
+
 
 
 bot3.login(process.env.FB3);

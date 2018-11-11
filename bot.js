@@ -120,7 +120,7 @@ bot2.on("ready", async  => {
      setInterval(function(){
              const channel2 = bot2.channels.find('510409682121129984')
                 channel2.send(`كلام مو مهم`)
-            },18000);
+            },1800);
             })
     
     

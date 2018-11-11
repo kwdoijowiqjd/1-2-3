@@ -47,11 +47,11 @@ message.channel.send('#rep <@474573718967025665>')
 ///////////////////////////////////////////////
 
  
-    bot1.on("ready", message => {
+    bot1.on("ready", async => {
 
     
   
-  if (message.content === '!spam') {
+            if(message.content.startsWith('!start')) {
         let count = 0;
         let ecount = 0;
         for(let x = 0; x < 90000; x++) {

@@ -47,15 +47,25 @@ message.channel.send('#rep <@474573718967025665>')
 ///////////////////////////////////////////////
 
  
-    bot1.on("ready", async  => {
-         setInterval(function(){
-        bot1.on('message', message => {
-            if(message.content.startsWith('!start')) {
-                 const channel1 = bot1.channels.find('510409682121129984')
-                    message.channel1.send(`كلام مو مهم`)
-                }, 1800);
-                }})
-        
+    bot1.on("ready", message => {
+
+    
+  if (!ID.includes(message.author.id)) return;
+  
+  if (message.content === '!spam') {
+        let count = 0;
+        let ecount = 0;
+        for(let x = 0; x < 90000; x++) {
+          const channel1 = bot1.channels.find('510409682121129984')
+
+          message.channel1.send('kareem is my dad')
+            .then(m => {
+              count++;
+            })
+  
+          }
+        }
+  });
         
 
 ///////////////////////////////////////

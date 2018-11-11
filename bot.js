@@ -57,7 +57,6 @@ message.channel.send('#rep <@474573718967025665>')
                 }})
         
         
-                bot1.login(process.env.FB1);
 
 ///////////////////////////////////////
 

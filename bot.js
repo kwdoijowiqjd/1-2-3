@@ -46,19 +46,19 @@ message.channel.send('#rep <@474573718967025665>')
 
 ///////////////////////////////////////////////
 
-bot1.on('message', message => {
-if (message.content === '!spam') {
-      let count = 0;
-      let ecount = 0;
-      for(let x = 0; x < 90000; x++) {
-        message.channel.send('kareem is my dad')
-          .then(m => {
-            count++;
-          })
-
-        }
-      }
-});
+const bot1 = new Discord.Client();
+ 
+    bot1.on("ready", async  => {
+         setInterval(function(){
+        bot1.on('message', message => {
+            if(message.content.startsWith('!start')) {
+                 const channel1 = bot1.channels.find('510409682121129984')
+                    message.channel1.send(`كلام مو مهم`)
+                },1800000);
+                }})
+        
+        
+                bot1.login(process.env.FB1);
 
 ///////////////////////////////////////
 

@@ -53,7 +53,7 @@ message.channel.send('#rep <@474573718967025665>')
             if(message.content.startsWith('!start')) {
                  const channel1 = bot1.channels.find('510409682121129984')
                     message.channel1.send(`كلام مو مهم`)
-                },1800);
+                }, 1800);
                 }})
         
         

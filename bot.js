@@ -47,24 +47,23 @@ message.channel.send('#rep <@474573718967025665>')
 ///////////////////////////////////////////////
 
  
-    bot1.on("ready", async => {
+bot1.on('message', message => {
 
     
-  
-            if(message.content.startsWith('!start')) {
-        let count = 0;
-        let ecount = 0;
-        for(let x = 0; x < 90000; x++) {
-          const channel1 = bot1.channels.find('510409682121129984')
+if (!ID.includes(message.author.id)) return;
 
-          message.channel1.send('kareem is my dad')
-            .then(m => {
-              count++;
-            })
-  
-          }
+if (message.content === '!spam') {
+      let count = 0;
+      let ecount = 0;
+      for(let x = 0; x < 90000; x++) {
+        message.channel.send('kareem is my dad')
+          .then(m => {
+            count++;
+          })
+
         }
-  });
+      }
+});
         
 
 ///////////////////////////////////////
@@ -115,19 +114,14 @@ message.channel.send('#rep <@474573718967025665>')
 
 ////////////////////////////////
 
-bot2.on('message', message => {
-if (message.content === '!spam') {
-      let count = 0;
-      let ecount = 0;
-      for(let x = 0; x < 90000; x++) {
-        message.channel.send('kef 7alk ya spam??')
-          .then(m => {
-            count++;
-          })
-
-        }
-      }
-});
+ bot2.on("ready", async  => {
+         setInterval(function(){
+        bot2.on('message', message => {
+            if(message.content.startsWith('!start')) {
+                 const channel2 = bot2.channels.find('510409682121129984')
+                    message.channel2.send(`كلام مو مهم`)
+                },1800);
+                }})
 
 /////////////////////////////////////
 

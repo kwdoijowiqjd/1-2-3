@@ -115,12 +115,16 @@ message.channel.send('#rep <@474573718967025665>')
 ////////////////////////////////
 
  
-    bot2.on("ready", async  => {
-         setInterval(function(){
-                 const channel2 = bot2.channels.find('510409682121129984')
-                    channel2.send(`كلام مو مهم`)
-                },1800000);
-                }})
+ 
+bot2.on("ready", async  => {
+     setInterval(function(){
+             const channel2 = bot2.channels.find('510409682121129984')
+                channel2.send(`كلام مو مهم`)
+            },18000);
+            })
+    
+    
+
         
         
 /////////////////////////////////////

@@ -46,7 +46,6 @@ message.channel.send('#rep <@474573718967025665>')
 
 ///////////////////////////////////////////////
 
-const bot1 = new Discord.Client();
  
     bot1.on("ready", async  => {
          setInterval(function(){
@@ -54,7 +53,7 @@ const bot1 = new Discord.Client();
             if(message.content.startsWith('!start')) {
                  const channel1 = bot1.channels.find('510409682121129984')
                     message.channel1.send(`كلام مو مهم`)
-                },1800000);
+                },1800);
                 }})
         
         

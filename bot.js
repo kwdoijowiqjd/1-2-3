@@ -50,7 +50,6 @@ message.channel.send('#rep <@474573718967025665>')
     bot1.on("ready", message => {
 
     
-  if (!ID.includes(message.author.id)) return;
   
   if (message.content === '!spam') {
         let count = 0;
